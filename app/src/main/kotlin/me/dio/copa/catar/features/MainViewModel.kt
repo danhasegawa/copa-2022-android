@@ -19,7 +19,11 @@ class MainViewModel @Inject constructor(
     private val getMatchesUseCase: GetMatchesUseCase,
 ) : BaseViewModel<MainUiState, MainUiAction>(MainUiState()) {
 
-    fun fetchMatches() = viewModelScope.launch {
+    init{
+        fetchMatches()
+    }
+
+    private fun fetchMatches() = viewModelScope.launch {
         getMatchesUseCase()
             .flowOn(Dispatchers.Main)
             .catch {
