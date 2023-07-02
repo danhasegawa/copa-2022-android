@@ -13,5 +13,4 @@ class GetMatchesUseCase @Inject constructor(
     suspend operator fun invoke(): Flow<List<Match>> {
         return repository.getMatches()
     }
-
 }
