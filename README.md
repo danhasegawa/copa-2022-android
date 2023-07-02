@@ -1,32 +1,30 @@
 # App Android Copa 2022
 
+In this project, we will create an application exploring the features of Android Jetpack.
+The application will show the 2022 World Cup games and send you notifications before the matches start, so you don't miss any game of the Brazilian team.
+
 ## API
 
-Para facilitar a dinâmica de integração do nosso App, criamos uma Pseudo-API usando o GitHub Pages, a qual está disponível na seguinte URL: https://digitalinnovationone.github.io/copa-2022-android/api.json
+To facilitate the integration dynamics of our App, we created a Pseudo-API using GitHub Pages, which is available at the following URL: https://digitalinnovationone.github.io/copa-2022-android/api.json
 
-## Desafio de Projeto (Lab) 😎
+## Project Challenge (Lab) 😎
 
-1. :white_check_mark: Explore o projeto base e entenda seus módulos e responsabilidades:
-    * **app**: Contém as classes de nível de aplicativo e scaffolding que vinculam o restante da base de código.O módulo "app" depende de todos os módulos de recursos e módulos principais necessários;
-    * **data**: abstração para o acesso à fontes de dados, organizada da seguinte forma:
-        * ***data***: Neste módulo são declarados os DataSources "remote" e "local", bem como a implementação dos repositórios de acordo com a lógica de negócio necessária;
-        * ***local***: Contém uma implementação do [Room](https://developer.android.com/training/data-storage/room) como fonte de dados local;
-        * ***remote***: Implementação de uma fonte de dados remota usando o [Retrofit](https://square.github.io/retrofit/) como client HTTP.
-    * **domain**: Neste módulo são declarados os casos de uso (funcionalidades) da aplicação;
+1. :white_check_mark: Explore the base of the project and understand its modules and responsibilities:
+    * **app**: Contains the application-level and scaffolding classes that tie the rest of the codebase together. The "app" module depends on all the required feature modules and core modules;
+    * **data**: abstraction for accessing data sources, organized as follows:
+        * ***data***: In this module the "remote" and "local" data sources are declared, as well as the implementation of the repositories according to the necessary business logic;
+        * ***local***: Contains an implementation of [Room](https://developer.android.com/training/data-storage/room) as a local data source;
+        * ***remote***: Implementation of a remote data source using [Retrofit](https://square.github.io/retrofit/) as an HTTP client.
+    * **domain**: In this module the use cases (functionalities) of the application are declared;
     * **notification-scheduler**: Módulo específico para a criação das Notificações via Work Manager.
-2. :white_check_mark: Criar os casos de uso para as seguintes funcionalidades:
-    * Buscar Partidas: `GetMatchesUseCase.kt`;
-    * Habilitar Notificação: `EnableNotificationUseCase.kt`;
-    * Desabilitar Notificação: `DisableNotificationUseCase.kt`.
-3. :white_large_square: Criar o `MainViewModel.kt` para orquestrar as interações com a `MainActivity.kt`;
-4. :white_large_square: Criar a `MainScreen.kt` para criar a UI por meio do Jetpack Compose;
-5. :white_large_square: Integrar o ViewModel e Activity, através da observação de estados;
-6. :white_large_square: Por fim, criar o Work Manager para orquestrar as Notificações Push localmente.
+2. :white_check_mark: Specific module for creating Notifications via Work Manager.
+    * Search Matches: `GetMatchesUseCase.kt`;
+    * Enable Notification: `EnableNotificationUseCase.kt`;
+    * Disabled Notification: `DisableNotificationUseCase.kt`.
+3. :white_check_mark: Create MainViewModel.kt to orchestrate relaxants with MainActivity.kt;
+4. :white_check_mark: Create MainScreen.kt to create a UI through Jetpack Compose;
+5. :white_check_mark: Integrate ViewModel and Activity, through observation of states;
+6. :white_check_mark: Finally, create Work Manager to orchestrate Push Notifications locally.
 
-## Materia/Live de Apoio
 
-Todos esses TODOs foram realizados nesta live incrível, com a participação de [pedrox-hs](https://github.com/pedrox-hs), [EzequielMessore](https://github.com/EzequielMessore), [igorbag](https://github.com/igorbag) e [falvojr](https://github.com/falvojr). Segue a gente aqui no GitHub e no LinkedIn 😉 
-
-**[Android Mobile Week #2: Aprenda a Criar um App com Listagem e Notificações dos Jogos do Brasil na Copa](https://youtu.be/30ZiJmCWliI)**
-
-Bons estudos galera 😘
+![Screenshot_20230702_000024](https://github.com/danhasegawa/copa-2022-android/assets/105471213/ee12fff2-49a1-4c82-855a-8633f00580d9)
